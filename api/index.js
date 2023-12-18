@@ -1,7 +1,7 @@
 const express = require('express');
-const connectDB = require('./db/db');
+const connectDB = require('../db/db');
 const jwt = require('jsonwebtoken');
-const { cityModel } = require('./models/cities');
+const { cityModel } = require('../models/cities');
 require('dotenv').config();
 
 var app = express();
@@ -15,14 +15,14 @@ app.use(express.json({extended:false}))
 
 //controller
 
-app.use('/api/users', require('./routes/users'));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/reset',require('./routes/reset'));
-app.use('/api/forget',require('./routes/forget'));
+app.use('/api/users', require('../routes/users'));
+app.use('/api/auth', require('../routes/auth'));
+app.use('/api/reset',require('../routes/reset'));
+app.use('/api/forget',require('../routes/forget'));
 // app.use('api/vendor/products', require('./routes/products'))
 
-app.use('/api/products',require('./routes/products'))
-app.use('/api/orders',require('./routes/order'))
+app.use('/api/products',require('../routes/products'))
+app.use('/api/orders',require('../routes/order'))
 
 
 // const data = {id:1 , name:"owais"}

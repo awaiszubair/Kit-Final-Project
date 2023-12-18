@@ -2,13 +2,13 @@
   "name": "contactmanagementapp",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./api/index.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node ./api/index.js",
+    "server": "nodemon ./api/index.js",
     "client": "npm start --prefix client",
     "clientInstall": "npm install --prefix client",
     "dev": "concurrently \"npm run client\" \"npm run server\""
