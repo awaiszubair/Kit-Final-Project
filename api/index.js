@@ -31,6 +31,9 @@ app.use('/api/orders',require('../routes/order'))
 // const decrypt = jwt.verify(token , "secret")
 // console.log("The token is" , decrypt)
 
-app.listen(port,()=>{
-    console.log("Server Started on Port: ",port);
+app.listen(5000,()=>{
+    console.log("Server Started on Port: ",5000);
 })
+
+
+module.exports = app;
